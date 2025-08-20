@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tuyển dụng – Công ty Cổ phần Sản xuất Công nghiệp AMC</title>
+
+  <!-- Google Font: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Animated background -->
+  <div class="bg">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="site-header glass">
+    <div class="wrap header-inner">
+      <a href="#" class="logo-link">
+        <img src="logo.jpg" alt="AMC Logo" class="logo-img" />
+      </a>
+      <div class="brand-text">
+        <h1>AMC – Công ty Cổ phần Sản xuất Công nghiệp</h1>
+        <p class="muted">AMC Industrial Manufacturing Joint Stock Company</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="wrap grid">
+    <!-- Job card -->
+    <section class="card glass">
+      <div class="badge">Tuyển dụng</div>
+      <h2>03 Cán bộ Kỹ thuật Công trường</h2>
+      <p class="lead">Mức lương: <strong>12–20 triệu</strong></p>
+
+      <h3>Yêu cầu</h3>
+      <ul class="ticks">
+        <li>Tốt nghiệp ĐH Xây Dựng, ĐH Kiến Trúc, ĐH GTVT, ĐH Thủy Lợi,… chuyên ngành xây dựng &amp; cơ khí.</li>
+        <li>Thành thạo về <strong>Kết cấu thép</strong> là một lợi thế.</li>
+        <li>Chấp nhận đi công tác xa nhà và dài ngày.</li>
+        <li>Chịu được áp lực công việc.</li>
+      </ul>
+
+      <div class="info-rows">
+        <div class="row">
+          <span class="label">Địa điểm làm việc</span>
+          <span>Theo dự án của Công ty trên toàn quốc</span>
+        </div>
+        <div class="row">
+          <span class="label">Liên hệ</span>
+          <span>0922.745.568 – Ms Ly (Phụ trách tuyển dụng)</span>
+        </div>
+        <div class="row">
+          <span class="label">Email nhận CV</span>
+          <span><a href="mailto:contact@amcsteel.vn">contact@amcsteel.vn</a></span>
+        </div>
+        <div class="row">
+          <span class="label">Ứng tuyển</span>
+          <span><a href="https://vieclam24h.vn/..." target="_blank" rel="noopener">Link việc làm 24h</a></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Company card -->
+    <section id="cong-ty" class="card glass">
+      <h3>Thông tin Công ty</h3>
+      <ul class="bullets">
+        <li><strong>Nhà máy:</strong> Thôn Lạc Cầu – Xã Nguyễn Văn Linh – Tỉnh Hưng Yên</li>
+        <li><strong>Hotline:</strong> <a href="tel:0922745568">092.274.5568</a></li>
+        <li><strong>Email:</strong> <a href="mailto:info@amcsteel.vn">info@amcsteel.vn</a></li>
+        <li><strong>Website:</strong> <a href="https://www.amcsteel.vn" target="_blank" rel="noopener">amcsteel.vn</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer glass">
+    <div class="wrap footer-inner">
+      <p>© <span id="y"></span> Công ty Cổ phần Sản xuất Công nghiệp AMC – All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Year auto-update
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Subtle parallax for blobs
+    const bg = document.querySelector('.bg');
+    let px = 0, py = 0;
+    window.addEventListener('mousemove', (e) => {
+      const x = (e.clientX / window.innerWidth - 0.5) * 12;
+      const y = (e.clientY / window.innerHeight - 0.5) * 12;
+      px += (x - px) * 0.06;
+      py += (y - py) * 0.06;
+      bg.style.setProperty('--tilt-x', `${px}deg`);
+      bg.style.setProperty('--tilt-y', `${-py}deg`);
+    }, { passive: true });
+  </script>
+</body>
+</html>
